@@ -20,4 +20,13 @@
     <ProjectReference Include="..\Database\Database.csproj" />
   </ItemGroup>
 
+  <Target Name="CopyToPluginsDir" BeforeTargets="CopyFilesToOutputDirectory">
+    <Copy DestinationFolder="$(ProjectDir)..\Worker\bin\$(ConfigurationName)\$(TargetFramework)\plugins"
+          SourceFiles="@(IntermediateAssembly)">
+    </Copy>
+    <Copy DestinationFolder="$(ProjectDir)..\WebUI\bin\$(ConfigurationName)\$(TargetFramework)\plugins"
+      SourceFiles="@(IntermediateAssembly)">
+    </Copy>
+  </Target>
+
 </Project>

@@ -12,7 +12,7 @@ namespace SK.TinyScheduler.Core
         {
             var plugins = new Dictionary<string, Assembly>();
 
-            var pluginsDir = Path.GetFullPath(PLUGINS_DIR);
+            var pluginsDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, PLUGINS_DIR);
             if (Directory.Exists(pluginsDir))
             {
                 foreach (var file in Directory.GetFiles(pluginsDir, "*.dll"))
