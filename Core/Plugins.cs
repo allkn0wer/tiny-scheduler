@@ -10,17 +10,18 @@ namespace SK.TinyScheduler.Core
 
         public static void Enable() 
         {
+            var plugins = new Dictionary<string, Assembly>();
+
             var pluginsDir = Path.GetFullPath(PLUGINS_DIR);
             if (Directory.Exists(pluginsDir))
             {
-                var plugins = new Dictionary<string, Assembly>();
                 foreach (var file in Directory.GetFiles(pluginsDir, "*.dll"))
                 {
                     var assembly = Assembly.LoadFile(file);
                     plugins.Add(assembly.GetName().FullName, assembly);
                 }
-                _plugins = new ReadOnlyDictionary<string, Assembly>(plugins);
             }
+            _plugins = new ReadOnlyDictionary<string, Assembly>(plugins);
 
             AppDomain.CurrentDomain.AssemblyResolve += ResolveAssembly;
         }

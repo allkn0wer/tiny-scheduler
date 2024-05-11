@@ -1,0 +1,13 @@
+<mat-toolbar>
+  <span [routerLink]="['/']">Tiny scheduler UI</span>
+  <span class="toolbar-spacer"></span>
+  <button mat-button [routerLink]="['/jobs']">
+    <mat-icon>account_tree</mat-icon> Задания
+  </button>
+  <button mat-button [routerLink]="['/job-instances']">
+    <mat-icon>play_circle</mat-icon> Экземпляры заданий
+  </button>
+  <button mat-button [routerLink]="['/admin']">
+    <mat-icon>settings</mat-icon> Администрирование
+  </button>
+</mat-toolbar>

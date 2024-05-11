@@ -1,1 +1,2 @@
 ﻿[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("APITests", AllInternalsVisible = true)]
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("CoreTests", AllInternalsVisible = true)]

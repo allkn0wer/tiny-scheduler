@@ -21,14 +21,6 @@ namespace SK.TinyScheduler.Core
                 process.StartInfo.CreateNoWindow = true;
                 process.StartInfo.UseShellExecute = false;
 
-                //process.OutputDataReceived += (sender, e) =>
-                //{
-                //    if (!string.IsNullOrEmpty(e.Data))
-                //    {
-                //        Console.WriteLine($"Output: {e.Data}");
-                //    }
-                //};
-
                 process.Start();
                 await process.WaitForExitAsync();
 

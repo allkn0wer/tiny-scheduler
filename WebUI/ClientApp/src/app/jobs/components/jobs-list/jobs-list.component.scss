@@ -1,0 +1,27 @@
+table {
+  width: 100%;
+}
+
+.mat-column-select {
+  overflow: initial;
+  width: 32px;
+}
+.mat-column-id { width: 32px; }
+.mat-column-operations { width: 130px; }
+
+.mat-mdc-raised-button {
+  margin: 8px 8px 8px 0;
+}
+
+.loading-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 56px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
